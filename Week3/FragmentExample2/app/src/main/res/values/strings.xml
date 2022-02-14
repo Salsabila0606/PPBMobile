@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FragmentExample1</string>
+    <string name="many_a_beatle_fanatic_started_down_the_outtake_road_like_i_did_with_a_first_listen_to_this_song_originally_titled_quot_beatle_bop_quot_and_recorded_in_a_single_session_that_yielded_four_songs_the_other_three_featured_tony_sheridan_with_the_beatles_as_a_backing_band_quot_cry_for_a_shadow_quot_is_an_instrumental_written_by_lennon_and_harrison_which_makes_it_unique_to_this_day_john_lennon_plays_rhythm_guitar_george_harrison_plays_lead_guitar_paul_mccartney_plays_bass_and_pete_best_plays_drums_the_sessions_were_produced_by_bert_kaempfert_in_hamburg_germany_during_the_beatles_second_visit_from_april_through_july_of_1961_to_play_in_the_reeperbahn_section_clubs">Many a Beatle fanatic started down the outtake road, like I did, with a first listen to this song. Originally titled \"Beatle Bop\" and recorded in a single session that yielded four songs (the other three featured Tony Sheridan with the Beatles as a backing band), \"Cry for a Shadow\" is an instrumental written by Lennon and Harrison, which makes it unique to this day. John Lennon plays rhythm guitar, George Harrison plays lead guitar, Paul McCartney plays bass, and Pete Best plays drums. The sessions were produced by Bert Kaempfert in Hamburg, Germany, during the Beatles\' second visit from April through July of 1961 to play in the Reeperbahn-section clubs.</string>
+    <string name="todo">TODO</string>
+    <string name="cry_for_a_shadow">Cry for a Shadow</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="question_article">LIKE THE ARTICLE?</string>
+
+    <string name="yes_message">ARTICLE: Like</string>
+    <string name="no_message">ARTICLE: Thanks</string>
+
+    <string name="open">OPEN</string>
+    <string name="close">CLOSE</string>
+
+</resources>
