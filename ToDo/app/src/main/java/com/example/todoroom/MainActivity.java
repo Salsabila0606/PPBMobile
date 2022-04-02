@@ -1,15 +1,17 @@
-package com.example.to_do;
+package com.example.todoroom;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
-        final TaskListAdapter adapter = new TaskListAdapter(new TaskListAdapter.TaskDiff());
+        final TaskListAdapter adapter = new TaskListAdapter(new TaskListAdapter.TaskDiff(), this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         mTaskViewModel = new ViewModelProvider(this).get(TaskViewModel.class);
@@ -48,10 +50,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == NEW_TASK_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
-            String title = data.getStringExtra(NewTaskActivity.EXTRA_TITLE);
-            String date = data.getStringExtra(NewTaskActivity.EXTRA_DATE);
-            String time = data.getStringExtra(NewTaskActivity.EXTRA_TIME);
-            Task task = new Task(title, date, time);
+            Task task = new Task(data.getStringExtra("title"),data.getStringExtra("date"),data.getStringExtra("time"));
             mTaskViewModel.insert(task);
         } else {
             Toast.makeText(

@@ -1,4 +1,4 @@
-package com.example.to_do;
+package com.example.todoroom;
 
 import org.junit.Test;
 

@@ -1,10 +1,8 @@
-package com.example.to_do;
+package com.example.todoroom;
 
-import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -15,24 +13,23 @@ import org.w3c.dom.Text;
 
 class TaskViewHolder extends RecyclerView.ViewHolder {
 
-    LinearLayout layoutView;
-    private Activity dialogView;
-    private final TextView judul ;
-//    private final TextView tanggal ;
-//    private final TextView waktu ;
+    private final TextView vtitle ;
+    private final TextView vdate ;
+    private final TextView vtime ;
+    LinearLayout layout;
 
     private TaskViewHolder(@NonNull View itemView) {
         super(itemView);
-        judul = dialogView.findViewById(R.id.title);
-//        tanggal = dialogView.findViewById(R.id.title);
-//        waktu = dialogView.findViewById(R.id.title);
+        vtitle = itemView.findViewById(R.id.titleView);
+        vdate = itemView.findViewById(R.id.dateView);
+        vtime = itemView.findViewById(R.id.timeView);
+        layout = itemView.findViewById(R.id.linearLayout);
     }
 
     public void bind(String title, String date, String time) {
-        judul.setText(title);
-//        tanggal.setText(title);
-//        waktu.setText(title);
-        layoutView = itemView.findViewById(R.id.titleRow);
+        vtitle.setText(title);
+        vdate.setText(date);
+        vtime.setText(time);
     }
 
     static TaskViewHolder create(ViewGroup parent) {
