@@ -24,7 +24,7 @@ public class TaskListAdapter extends ListAdapter<Task,TaskViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(TaskViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
         Task current = getItem(position);
         holder.bind(current.getTitleTask(),current.getDateTask(),current.getTimeTask());
         holder.layout.setOnClickListener(new View.OnClickListener(){
