@@ -112,9 +112,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeLayout"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="296dp" />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

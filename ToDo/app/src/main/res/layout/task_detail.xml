@@ -20,6 +20,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="Nama Tugas :"
+                android:textSize="12dp"
                 android:textColor="@color/black"
                 tools:ignore="MissingConstraints" />
 
@@ -29,48 +30,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
+                android:textSize="12dp"
                 android:textColor="@color/black"
                 tools:ignore="MissingConstraints" />
 
         </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/dateTugasRow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="50dp"
-            android:text="Deadline        :"
-            android:textColor="@color/black" />
-
-        <EditText
-            android:id="@+id/dateDetail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="50dp"
-            android:textColor="@color/black" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/timeTugasRow"
         android:layout_width="410dp"
-        android:layout_height="138dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -78,16 +53,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="1dp"
             android:text="Waktu Deadline       :"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="12dp" />
 
         <EditText
             android:id="@+id/timeDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="1dp"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dateTugasRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="1dp"
+            android:text="Deadline        :"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/dateDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:textSize="12dp"
             android:textColor="@color/black" />
 
     </LinearLayout>
