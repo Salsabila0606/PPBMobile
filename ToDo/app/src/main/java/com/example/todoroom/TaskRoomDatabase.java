@@ -51,10 +51,9 @@ import java.util.concurrent.Executors;
                 TaskDao dao = INSTANCE.taskDao();
                 dao.deleteAll();
 
-                Task task = new Task("PPB Mobile", "6 March", "15:00 pm");
-                dao.insert(task);
-                Task task2 = new Task("Statistika", "10 March", "20:00 pm");
-                dao.insert(task);
+//                Task task = new Task("PPB Mobile", "6 APRIL", "1:00 PM");
+//                dao.insert(task);
+
 
             });
         }
