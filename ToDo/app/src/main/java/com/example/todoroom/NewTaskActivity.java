@@ -5,6 +5,9 @@ import static android.content.ContentValues.TAG;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,8 +20,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkInfo;
+import androidx.work.WorkManager;
 
 import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
@@ -31,6 +39,8 @@ public class NewTaskActivity extends AppCompatActivity {
     private TextView ndate;
     private TextView ntime;
     Button btn;
+    OneTimeWorkRequest mRequest;
+    WorkManager mWorkManager;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -49,7 +59,7 @@ public class NewTaskActivity extends AppCompatActivity {
 
         //Set tanggal
         ndate.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
+            //@RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
                 final DatePickerDialog datePickerDialog = new DatePickerDialog(getLayoutInflater().getContext(),
@@ -116,6 +126,24 @@ public class NewTaskActivity extends AppCompatActivity {
                 replyIntent.putExtra("date", ydate);
                 replyIntent.putExtra("time", ytime);
                 setResult(RESULT_OK, replyIntent);
+
+                mRequest = new OneTimeWorkRequest.Builder(NotificationWorker.class).build();
+                mWorkManager = WorkManager.getInstance();
+
+                mWorkManager.getWorkInfoByIdLiveData(mRequest.getId()).observe(this, new Observer<WorkInfo>() {
+                    @Override
+                    public void onChanged(@Nullable WorkInfo workInfo) {
+                        if (workInfo != null) {
+                            WorkInfo.State state = workInfo.getState();
+                            //tvStatus.append(state.toString() + "\n");
+
+                        }
+                    }
+                });
+                /**
+                 * Enqueue the WorkRequest
+                 */
+                mWorkManager.enqueue(mRequest);
             }
             finish();
         });

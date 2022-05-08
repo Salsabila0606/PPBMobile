@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.work.ExistingPeriodicWorkPolicy;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
 
+import android.app.job.JobScheduler;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
@@ -13,6 +18,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton fab;
     private TaskViewModel mTaskViewModel;
     public static final int NEW_TASK_ACTIVITY_REQUEST_CODE = 1;
+    public static final String MESSAGE_STATUS = "message_status";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

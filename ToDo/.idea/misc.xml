@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/ToDo/app/src/main/res/drawable/ic_job_running.xml" value="0.1" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/ToDo/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Acer/AndroidStudioProjects/ToDo/app/src/main/res/layout/add_new_task.xml" value="0.1" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/ToDoRoom/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1325" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/ToDoRoom/app/src/main/res/drawable/icon_date.xml" value="0.131" />
         <entry key="..\:/Users/Acer/AndroidStudioProjects/ToDoRoom/app/src/main/res/drawable/icon_judul.xml" value="0.131" />
