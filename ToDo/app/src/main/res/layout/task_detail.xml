@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".TaskDetailActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-        <LinearLayout
-            android:id="@+id/namaTugasRow"
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/namaTugasRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/dark_grey"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/nama_tugas"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:ignore="MissingConstraints">
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Nama Tugas :"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/nama_tugas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:text="Nama Tugas :"
-                android:textSize="12dp"
-                android:textColor="@color/black"
-                tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/titleDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints" />
 
-            <EditText
-                android:id="@+id/titleDetail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:textSize="12dp"
-                android:textColor="@color/black"
-                tools:ignore="MissingConstraints" />
-
-        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/timeTugasRow"
@@ -47,6 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/dark_grey"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -55,7 +57,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="1dp"
             android:text="Waktu Deadline       :"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="12dp" />
 
         <EditText
@@ -64,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="1dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="12dp" />
 
     </LinearLayout>
@@ -73,12 +75,13 @@
         android:id="@+id/dateTugasRow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namaTugasRow"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:layout_width="wrap_content"
@@ -95,9 +98,37 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="1dp"
-            android:textSize="12dp"
-            android:textColor="@color/black" />
-
+            android:textColor="@color/black"
+            android:textSize="12dp" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeTugasRow"
+        app:layout_constraintVertical_bias="0.063">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DELETE"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

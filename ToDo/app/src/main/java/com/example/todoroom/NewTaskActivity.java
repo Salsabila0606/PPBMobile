@@ -135,7 +135,7 @@ public class NewTaskActivity extends AppCompatActivity {
                     public void onChanged(@Nullable WorkInfo workInfo) {
                         if (workInfo != null) {
                             WorkInfo.State state = workInfo.getState();
-                            //tvStatus.append(state.toString() + "\n");
+//                            tvStatus.append(state.toString() + "\n");
 
                         }
                     }

@@ -25,7 +25,7 @@ public class NotificationWorker extends Worker {
         Data taskData = getInputData();
         String taskDataString = taskData.getString(MainActivity.MESSAGE_STATUS);
 
-        showNotification("TASK UPDATED", "You Have a New Task");
+        showNotification("You have a new task", "Your Task Deadline is Tomorrow");
 
         Data outputData = new Data.Builder().putString(WORK_RESULT, "Jobs Finished").build();
 
